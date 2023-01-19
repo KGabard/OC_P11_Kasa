@@ -1,0 +1,20 @@
+.rating {
+  display: flex;
+  gap: 12px;
+
+  & .star {
+    width: 32px;
+    fill: blue;
+    color: blue;
+    stroke: blue;
+    & path {
+      fill: blue;
+      color: blue;
+      stroke: blue;
+    }
+
+    &--empty {
+      fill: $neutral-primary;
+    }
+  }
+}

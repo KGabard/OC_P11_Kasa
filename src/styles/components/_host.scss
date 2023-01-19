@@ -1,0 +1,16 @@
+.host {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__name {
+    @include typographies(body)
+  }
+
+  &__picture {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,69 @@
+.accordion {
+  width: 50%;
+
+  &__header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background-color: $highlight-primary;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__title {
+    color: $basic-white;
+    &--housing-page {
+      @include typographies(body);
+    }
+    &--about-page {
+      @include typographies(subtitle);
+    }
+  }
+
+  &__chevron {
+    height: 18px;
+    transition: transform 250ms ease-in-out;
+    width: fit-content;
+    cursor: pointer;
+
+    &--open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__description {
+    overflow: hidden;
+    height: 0px;
+    transform: translateY(-12px);
+
+    &--open {
+      height: fit-content;
+    }
+
+    &__slider {
+      background-color: $neutral-primary;
+      width: 100%;
+      height: fit-content;
+      padding: 32px 16px;
+      border-radius: 0 0 12px 12px;
+      transform: translateY(-100%);
+      transition: transform 250ms ease-in-out;
+
+      &--open {
+        transform: translateY(0%);
+      }
+    }
+
+    &__text {
+      &--housing-page {
+        @include typographies(body-light);
+      }
+      &--about-page {
+        @include typographies(subtitle-light);
+      }
+    }
+  }
+}

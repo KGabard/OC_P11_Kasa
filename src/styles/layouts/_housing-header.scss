@@ -1,0 +1,33 @@
+.housing-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  row-gap: 24px;
+
+  &__title-container {
+    &__title {
+      @include typographies(title)
+    }
+    &__location {
+      @include typographies(body)
+    }
+  }
+
+  &__infos-container {
+    grid-row: 1 / -1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__tags-list {
+    &__list{
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      list-style: none;
+    }
+  }
+}

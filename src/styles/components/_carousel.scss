@@ -23,21 +23,26 @@
   }
 
   &__buttons {
-    width: 50px;
-    background-color: white;
+    background-color: transparent;
     border: none;
-    font-size: 2rem;
-    padding: 1rem;
     position: absolute;
     z-index: 1;
     cursor: pointer;
 
     &--previous {
       left: 20px;
+      & .chevron-icon{
+        width: 80px;
+        transform: rotate(-90deg);
+      }
     }
 
     &--next {
       right: 20px;
+      & .chevron-icon{
+        width: 80px;
+        transform: rotate(90deg);
+      }
     }
   }
 }

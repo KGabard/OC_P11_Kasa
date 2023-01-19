@@ -1,0 +1,15 @@
+.tag {
+  min-width: 112px;
+  width: fit-content;
+  height: 24px;
+  background-color: $highlight-primary;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  &__label {
+    @include typographies(tag);
+    color: white;
+  }
+}

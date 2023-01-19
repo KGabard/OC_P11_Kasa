@@ -1,4 +1,5 @@
 import { FunctionComponent, useState } from 'react'
+import chevronIcon from '../assets/icons/chevron-up.svg'
 
 type Props = {
   images: string[]
@@ -15,8 +16,6 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
     images.length < 2 ? 0 : 1
   )
   const [isSliding, setIsSliding] = useState<slideType>('none')
-
-  console.log(images)
 
   const handlePreviousClick = () => {
     if (isSliding !== 'none') return
@@ -52,7 +51,7 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
         className="carousel__buttons carousel__buttons--previous"
         onClick={handlePreviousClick}
       >
-        &lt;
+        <img className="chevron-icon" src={chevronIcon} alt="chevron" />
       </button>
       <img
         src={images[nextImageIndex]}
@@ -79,7 +78,7 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
         className="carousel__buttons carousel__buttons--next"
         onClick={handleNextClick}
       >
-        &gt;
+        <img className="chevron-icon" src={chevronIcon} alt="chevron" />
       </button>
     </div>
   )
