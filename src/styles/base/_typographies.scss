@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+$typographies: (
+  404: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 288px,
+    font-weight: 700,
+  ),
+  header: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 48px,
+    font-weight: 500,
+  ),
+  title: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 36px,
+    font-weight: 500,
+  ),
+  subtitle: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 24px,
+    font-weight: 500,
+  ),
+  subtitle-light: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 24px,
+    font-weight: 400,
+  ),
+  body: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 18px,
+    font-weight: 500,
+  ),
+  body-light: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 18px,
+    font-weight: 400,
+  ),
+  tag: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 14px,
+    font-weight: 500,
+  ),
+);
+
+$mobile-typographies: (
+  404: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 96px,
+    font-weight: 700,
+  ),
+  header: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 24px,
+    font-weight: 500,
+  ),
+  title: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 18px,
+    font-weight: 500,
+  ),
+  subtitle: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 14px,
+    font-weight: 500,
+  ),
+  subtitle-light: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 14px,
+    font-weight: 400,
+  ),
+  body: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 12px,
+    font-weight: 500,
+  ),
+  body-light: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 12px,
+    font-weight: 400,
+  ),
+  tag: (
+    font-family: (
+      'Montserrat',
+      sans-serif,
+    ),
+    font-size: 10px,
+    font-weight: 500,
+  ),
+);

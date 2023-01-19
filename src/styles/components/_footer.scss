@@ -1,0 +1,18 @@
+.footer {
+  background-color: $basic-black;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: auto;
+  padding: 64px 0 32px;
+  &__logo {
+    height: 40px;
+    filter: brightness(100);
+  }
+  &__infos {
+    @include typographies(subtitle);
+    color: $basic-white;
+  }
+}
