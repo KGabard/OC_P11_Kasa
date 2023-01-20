@@ -33,8 +33,15 @@ const Housing = () => {
           <div className="housing-infos">
             <Accordion
               title={'Description'}
-              description={currentHousing.description}
+              content={currentHousing.description}
               version={'housing-page'}
+              open={true}
+            />
+            <Accordion
+              title={'Équipements'}
+              content={currentHousing.equipments}
+              version={'housing-page'}
+              open={true}
             />
           </div>
         </>

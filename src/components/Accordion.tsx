@@ -1,20 +1,33 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import chevronIcon from '../assets/icons/chevron-up.svg'
 
 type Props = {
   title: string
-  description: string
+  content: string | string[]
   version?: 'housing-page' | 'about-page'
+  open?: boolean
 }
 
-function Accordion({ title, description, version = 'housing-page' }: Props) {
-  const [isOpen, setIsOpen] = useState(false)
+function Accordion({
+  title,
+  content,
+  version = 'housing-page',
+  open = false,
+}: Props) {
+  const [isOpen, setIsOpen] = useState(open)
   const [isOpening, setIsOpening] = useState(false)
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  let text: string
 
-  console.log(version)
+  if (Array.isArray(content)) {
+    text = content.join('\n')
+  } else {
+    text = content
+  }
 
   const handleToggleDescription = () => {
     if (isOpening) return
+    if (!isOpen) contentRef.current?.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
     setIsOpening(true)
     setIsOpen(!isOpen)
     setTimeout(() => {
@@ -24,7 +37,7 @@ function Accordion({ title, description, version = 'housing-page' }: Props) {
 
   return (
     <div className="accordion">
-      <div className="accordion__header">
+      <div className="accordion__header" onClick={handleToggleDescription}>
         <h2
           className={`accordion__title ${
             version === 'housing-page' ? 'accordion__title--housing-page' : ''
@@ -38,10 +51,10 @@ function Accordion({ title, description, version = 'housing-page' }: Props) {
           }`}
           src={chevronIcon}
           alt="chevron"
-          onClick={handleToggleDescription}
         />
       </div>
       <div
+        ref={contentRef}
         className={`accordion__description ${
           isOpen || isOpening ? 'accordion__description--open' : ''
         }`}
@@ -61,8 +74,9 @@ function Accordion({ title, description, version = 'housing-page' }: Props) {
                 ? 'accordion__description__text--about-page'
                 : ''
             }`}
+            style={Array.isArray(content) ? { whiteSpace: 'break-spaces' } : {}}
           >
-            {description}
+            {text}
           </p>
         </div>
       </div>

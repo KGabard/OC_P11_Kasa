@@ -28,6 +28,7 @@
     position: absolute;
     z-index: 1;
     cursor: pointer;
+    filter: drop-shadow(2px 2px 2px rgb(0,0,0,0.4));
 
     &--previous {
       left: 20px;
