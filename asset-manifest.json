@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OC_P11_Kasa/static/css/main.e263cf33.css",
-    "main.js": "/OC_P11_Kasa/static/js/main.3481d195.js",
+    "main.js": "/OC_P11_Kasa/static/js/main.16de48b2.js",
     "static/media/home-banner.jpg": "/OC_P11_Kasa/static/media/home-banner.17cb754f99592c5d9029.jpg",
     "static/media/about-banner.jpg": "/OC_P11_Kasa/static/media/about-banner.99355d736d3ffcf9b3f4.jpg",
     "static/media/kasa-logo-big.svg": "/OC_P11_Kasa/static/media/kasa-logo-big.a6101328193bb3191cbcb50c120ec0d1.svg",
@@ -10,10 +10,10 @@
     "index.html": "/OC_P11_Kasa/index.html",
     "static/media/chevron-up.svg": "/OC_P11_Kasa/static/media/chevron-up.5f11f9d0cc88a7d64a74646869f6e261.svg",
     "main.e263cf33.css.map": "/OC_P11_Kasa/static/css/main.e263cf33.css.map",
-    "main.3481d195.js.map": "/OC_P11_Kasa/static/js/main.3481d195.js.map"
+    "main.16de48b2.js.map": "/OC_P11_Kasa/static/js/main.16de48b2.js.map"
   },
   "entrypoints": [
     "static/css/main.e263cf33.css",
-    "static/js/main.3481d195.js"
+    "static/js/main.16de48b2.js"
   ]
 }
