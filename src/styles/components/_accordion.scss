@@ -72,3 +72,22 @@
     }
   }
 }
+
+@include tablet-and-mobile {
+  .accordion {
+    &__header {
+      padding: 8px 12px;
+    }
+
+    &__chevron {
+      height: 16px;
+      width: 16px;
+    }
+
+    &__description {
+      &__slider {
+        padding: 20px 12px 16px;
+      }
+    }
+  }
+}

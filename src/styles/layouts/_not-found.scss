@@ -8,15 +8,27 @@
     @include typographies(404);
     margin-bottom: 48px;
   }
-  
+
   &__subtitle {
     @include typographies(title);
     margin-bottom: 144px;
-
+    text-align: center;
   }
 
   &__homepage-link {
     @include typographies(body);
     color: inherit;
+  }
+}
+
+@include tablet-and-mobile {
+  .not-found {
+    &__header {
+      margin-bottom: 32px;
+    }
+  
+    &__subtitle {
+      margin-bottom: 96px;
+    }
   }
 }

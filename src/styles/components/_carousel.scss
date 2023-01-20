@@ -10,14 +10,15 @@
 
   &__image {
     min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     transform: translateX(0%);
     &.slide-left {
-      transition: transform 0.4s cubic-bezier(.74,.09,.79,.87);
+      transition: transform 0.4s cubic-bezier(0.74, 0.09, 0.79, 0.87);
       transform: translateX(-100%);
     }
     &.slide-right {
-      transition: transform 0.4s cubic-bezier(.74,.09,.79,.87);
+      transition: transform 0.4s cubic-bezier(0.74, 0.09, 0.79, 0.87);
       transform: translateX(100%);
     }
   }
@@ -28,11 +29,11 @@
     position: absolute;
     z-index: 1;
     cursor: pointer;
-    filter: drop-shadow(2px 2px 2px rgb(0,0,0,0.4));
+    filter: drop-shadow(2px 2px 2px rgb(0, 0, 0, 0.4));
 
     &--previous {
       left: 20px;
-      & .chevron-icon{
+      & .chevron-icon {
         width: 80px;
         transform: rotate(-90deg);
       }
@@ -40,10 +41,20 @@
 
     &--next {
       right: 20px;
-      & .chevron-icon{
+      & .chevron-icon {
         width: 80px;
         transform: rotate(90deg);
       }
+    }
+  }
+}
+
+@include tablet-and-mobile {
+  .carousel {
+    height: 336px;
+
+    & .chevron-icon {
+      width: 40px;
     }
   }
 }

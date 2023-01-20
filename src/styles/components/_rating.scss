@@ -18,3 +18,12 @@
     }
   }
 }
+
+@include tablet-and-mobile {
+  .rating {
+    gap: 8px;
+    & .star {
+      width: 16px;
+    }
+  }
+}

@@ -1,23 +1,8 @@
-// @keyframes pulse-animation {
-//   0% {
-//     box-shadow: 0 0 0 0px $highlight-secondary;
-//   }
-//   100% {
-//     box-shadow: 0 0 10px 15px rgba(255, 255, 255, 0);
-//   }
-// }
-
-// @keyframes delayedDisappearing {
-//   0% {
-//     height: 0px;
-//   }
-//   50% {
-//     height: 0px;
-//   }
-//   51% {
-//     height: fit-content;
-//   }
-//   100% {
-//     height: fit-content;
-//   }
-// }
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

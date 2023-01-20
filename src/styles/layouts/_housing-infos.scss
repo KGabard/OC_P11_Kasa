@@ -3,3 +3,10 @@
   display: flex;
   gap: 72px;
 }
+
+@include tablet-and-mobile {
+  .housing-infos {
+    gap: 20px;
+    flex-direction: column;
+  }
+}

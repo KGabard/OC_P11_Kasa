@@ -7,3 +7,11 @@
   flex-direction: column;
   gap: 40px;
 }
+
+@include tablet-and-mobile {
+  .page-body {
+    margin: 32px auto 64px;
+    padding: 0 $mobile-margin;
+    gap: 24px;
+  }
+}

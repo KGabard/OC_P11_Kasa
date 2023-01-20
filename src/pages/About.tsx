@@ -5,7 +5,7 @@ import Accordion from '../components/Accordion'
 const About = () => {
   return (
     <>
-      <Banner imageUrl={aboutBanner} title="Chez vous, partout et ailleurs" />
+      <Banner imageUrl={aboutBanner} version='about-page'/>
       <Accordion
         title={'Fiabilité'}
         content={'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.'}

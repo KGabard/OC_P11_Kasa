@@ -24,3 +24,11 @@
     color: white;
   }
 }
+
+@include tablet-and-mobile {
+  .banner {
+    &--home-page {
+      height: 112px;
+    }
+  }
+}

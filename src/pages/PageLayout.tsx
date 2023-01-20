@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import Footer from '../layouts/Footer'
+import Header from '../layouts/Header'
 
 const PageLayout = ({ children }: PropsWithChildren) => {
   return (

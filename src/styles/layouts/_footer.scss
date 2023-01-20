@@ -16,3 +16,15 @@
     color: $basic-white;
   }
 }
+
+@include tablet-and-mobile {
+  .footer {
+    gap: 24px;
+    padding: 64px 0 40px;
+
+    &__logo {
+      height: 32px;
+      filter: brightness(100);
+    }
+  }
+}

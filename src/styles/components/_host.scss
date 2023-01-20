@@ -4,7 +4,7 @@
   gap: 12px;
 
   &__name {
-    @include typographies(body)
+    @include typographies(body);
   }
 
   &__picture {
@@ -12,5 +12,16 @@
     height: 64px;
     object-fit: cover;
     border-radius: 50%;
+  }
+}
+
+@include tablet-and-mobile {
+  .host {
+    gap: 8px;
+    
+    &__picture {
+      width: 32px;
+      height: 32px;
+    }
   }
 }
