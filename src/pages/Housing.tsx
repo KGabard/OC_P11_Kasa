@@ -16,7 +16,7 @@ const Housing = () => {
       navigate('/')
     }
     window.scrollTo(0, 0)
-  }, [])
+  }, [currentHousing, navigate])
 
   return (
     <>
