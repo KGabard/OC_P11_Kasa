@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/OC_P11_Kasa/static/css/main.e263cf33.css",
+    "main.css": "/OC_P11_Kasa/static/css/main.4bcd9092.css",
     "main.js": "/OC_P11_Kasa/static/js/main.16de48b2.js",
     "static/media/home-banner.jpg": "/OC_P11_Kasa/static/media/home-banner.17cb754f99592c5d9029.jpg",
     "static/media/about-banner.jpg": "/OC_P11_Kasa/static/media/about-banner.99355d736d3ffcf9b3f4.jpg",
@@ -9,11 +9,11 @@
     "static/media/full-star.svg": "/OC_P11_Kasa/static/media/full-star.f88553d95835aeac95055eab97dd26fa.svg",
     "index.html": "/OC_P11_Kasa/index.html",
     "static/media/chevron-up.svg": "/OC_P11_Kasa/static/media/chevron-up.5f11f9d0cc88a7d64a74646869f6e261.svg",
-    "main.e263cf33.css.map": "/OC_P11_Kasa/static/css/main.e263cf33.css.map",
+    "main.4bcd9092.css.map": "/OC_P11_Kasa/static/css/main.4bcd9092.css.map",
     "main.16de48b2.js.map": "/OC_P11_Kasa/static/js/main.16de48b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.e263cf33.css",
+    "static/css/main.4bcd9092.css",
     "static/js/main.16de48b2.js"
   ]
 }
