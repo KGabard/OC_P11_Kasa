@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/OC_P11_Kasa/static/css/main.4bcd9092.css",
-    "main.js": "/OC_P11_Kasa/static/js/main.16de48b2.js",
+    "main.css": "/OC_P11_Kasa/static/css/main.103374e9.css",
+    "main.js": "/OC_P11_Kasa/static/js/main.22a707cf.js",
     "static/media/home-banner.jpg": "/OC_P11_Kasa/static/media/home-banner.17cb754f99592c5d9029.jpg",
     "static/media/about-banner.jpg": "/OC_P11_Kasa/static/media/about-banner.99355d736d3ffcf9b3f4.jpg",
     "static/media/kasa-logo-big.svg": "/OC_P11_Kasa/static/media/kasa-logo-big.a6101328193bb3191cbcb50c120ec0d1.svg",
-    "static/media/empty-star.svg": "/OC_P11_Kasa/static/media/empty-star.2f883a46ed407f87e70c331bd5d1f687.svg",
+    "static/media/empty-star.svg": "/OC_P11_Kasa/static/media/empty-star.dc0fb23b5a3cd9c4f865b6cd038ec814.svg",
     "static/media/full-star.svg": "/OC_P11_Kasa/static/media/full-star.f88553d95835aeac95055eab97dd26fa.svg",
     "index.html": "/OC_P11_Kasa/index.html",
     "static/media/chevron-up.svg": "/OC_P11_Kasa/static/media/chevron-up.5f11f9d0cc88a7d64a74646869f6e261.svg",
-    "main.4bcd9092.css.map": "/OC_P11_Kasa/static/css/main.4bcd9092.css.map",
-    "main.16de48b2.js.map": "/OC_P11_Kasa/static/js/main.16de48b2.js.map"
+    "static/media/burger.svg": "/OC_P11_Kasa/static/media/burger.1d5fcb8f7df111ba69e9669aa1a49fa9.svg",
+    "main.103374e9.css.map": "/OC_P11_Kasa/static/css/main.103374e9.css.map",
+    "main.22a707cf.js.map": "/OC_P11_Kasa/static/js/main.22a707cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bcd9092.css",
-    "static/js/main.16de48b2.js"
+    "static/css/main.103374e9.css",
+    "static/js/main.22a707cf.js"
   ]
 }
