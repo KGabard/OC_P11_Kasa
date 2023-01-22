@@ -1,6 +1,4 @@
 .accordion {
-  // width: 0px;
-  // flex: 1 1 0px;
   width: 100%;
 
   &__header {
@@ -29,9 +27,7 @@
   &__chevron {
     height: 24px;
     width: 24px;
-    width: fit-content;
     transition: transform 250ms ease-in-out;
-    width: fit-content;
 
     &--open {
       transform: rotate(-180deg);

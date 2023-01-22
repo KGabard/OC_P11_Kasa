@@ -17,7 +17,7 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
   )
   const [isSliding, setIsSliding] = useState<slideType>('none')
 
-  const handlePreviousClick = () => {
+  const handleNextClick = () => {
     if (isSliding !== 'none') return
     setIsSliding('right')
 
@@ -31,7 +31,7 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
     }, 400)
   }
 
-  const handleNextClick = () => {
+  const handlePreviousClick = () => {
     if (isSliding !== 'none') return
     setIsSliding('left')
 
