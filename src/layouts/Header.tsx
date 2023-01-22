@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import kasaLogo from '../assets/logo/kasa-logo-big.svg'
 import burgerIcon from '../assets/icons/burger.svg'
 import { useState } from 'react'
@@ -18,7 +18,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img src={kasaLogo} alt="logo Kasa" className="header__logo" />
+      <Link to={'/'}>
+        <img src={kasaLogo} alt="logo Kasa" className="header__logo" />
+      </Link>
       <nav className="header__navbar">
         <img
           className="header__navbar__icon"
@@ -29,11 +31,9 @@ const Header = () => {
         <ul
           className={`header__navbar__list ${
             isOpen ? 'header__navbar__list--open' : ''
-          } ${
-            isOpening && isOpen ? 'header__navbar__list--opening' : ''
-          } ${
+          } ${isOpening && isOpen ? 'header__navbar__list--opening' : ''} ${
             isOpening && !isOpen ? 'header__navbar__list--closing' : ''
-          }` }
+          }`}
         >
           <li
             className={`header__navbar__list__item ${

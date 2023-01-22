@@ -13,7 +13,7 @@ const Housing = () => {
 
   useEffect(() => {
     if (!currentHousing) {
-      navigate('/')
+      navigate('/not-found')
     }
     window.scrollTo(0, 0)
   }, [currentHousing, navigate])

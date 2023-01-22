@@ -19,7 +19,7 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
 
   const handlePreviousClick = () => {
     if (isSliding !== 'none') return
-    setIsSliding('left')
+    setIsSliding('right')
 
     setTimeout(() => {
       setNextImageIndex(currentImageIndex)
@@ -33,7 +33,7 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
 
   const handleNextClick = () => {
     if (isSliding !== 'none') return
-    setIsSliding('right')
+    setIsSliding('left')
 
     setTimeout(() => {
       setPreviousImageIndex(currentImageIndex)
@@ -48,14 +48,16 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
   return (
     <div className="carousel">
       <button
-        className="carousel__buttons carousel__buttons--previous"
+        className={`carousel__buttons carousel__buttons--previous ${
+          images.length < 2 ? 'hide' : ''
+        }`}
         onClick={handlePreviousClick}
       >
         <img className="chevron-icon" src={chevronIcon} alt="chevron" />
       </button>
       <img
-        src={images[nextImageIndex]}
-        className={`carousel__image carousel__image--next 
+        src={images[previousImageIndex]}
+        className={`carousel__image carousel__image--previous
         ${isSliding === 'right' ? 'slide-right' : ''}
         ${isSliding === 'left' ? 'slide-left' : ''}`}
         alt="Présentation du logmement"
@@ -68,18 +70,49 @@ const Carousel: FunctionComponent<Props> = ({ images }) => {
         alt="Présentation du logmement"
       />
       <img
-        src={images[previousImageIndex]}
-        className={`carousel__image carousel__image--previous 
+        src={images[nextImageIndex]}
+        className={`carousel__image carousel__image--next 
         ${isSliding === 'right' ? 'slide-right' : ''}
         ${isSliding === 'left' ? 'slide-left' : ''}`}
         alt="Présentation du logmement"
       />
       <button
-        className="carousel__buttons carousel__buttons--next"
+        className={`carousel__buttons carousel__buttons--next ${
+          images.length < 2 ? 'hide' : ''
+        }`}
         onClick={handleNextClick}
       >
         <img className="chevron-icon" src={chevronIcon} alt="chevron" />
       </button>
+      <div
+        className={`carousel__bullet-points ${images.length < 2 ? 'hide' : ''}`}
+      >
+        <ul className="carousel__bullet-points__list">
+          {images.map((image, imageIndex) => {
+            return (
+              <li
+                key={imageIndex}
+                className={`carousel__bullet-points__list__item ${
+                  imageIndex === currentImageIndex
+                    ? 'carousel__bullet-points__list__item--active'
+                    : ''
+                } ${
+                  imageIndex === currentImageIndex && isSliding === 'right'
+                    ? 'slide-left'
+                    : ''
+                } ${
+                  imageIndex === currentImageIndex && isSliding === 'left'
+                    ? 'slide-right'
+                    : ''
+                }`}
+              ></li>
+            )
+          })}
+          {/* <li
+            className={`carousel__bullet-points__list__item--active`}
+          ></li> */}
+        </ul>
+      </div>
     </div>
   )
 }
