@@ -30,3 +30,29 @@
     transform: scaleX(1) scaleY(1) translateX(48px);
   }
 }
+
+@include tablet-and-mobile {
+  @keyframes squeeze-slide-left {
+    0% {
+      transform: scaleX(1) scaleY(1) translateX(0);
+    }
+    50% {
+      transform: scaleX(1.4) scaleY(0.5) translateX(-24px);
+    }
+    100% {
+      transform: scaleX(1) scaleY(1) translateX(-36px);
+    }
+  }
+  
+  @keyframes squeeze-slide-right {
+    0% {
+      transform: scaleX(1) scaleY(1) translateX(0);
+    }
+    50% {
+      transform: scaleX(1.4) scaleY(0.5) translateX(24px);
+    }
+    100% {
+      transform: scaleX(1) scaleY(1) translateX(36px);
+    }
+  }
+}
