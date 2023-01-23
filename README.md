@@ -5,9 +5,9 @@
 - Mettre en place un système de navigation avec React Router.
 - Développer l'application avec Typecscript.
 - Organiser la structure de dossier de l'application (Components, Layouts, Pages, etc...).
-- Créer des composants adatables et réutilisables.
-- Hydrater les composants via les props selon une base de données locale.
+- Créer des composants adaptables et réutilisables.
 - Identifier le sujet de la page à l'aide de la navigation et du hook useParams.
+- Hydrater les composants via les props selon une base de données locale.
 - Gérer les erreurs de navigation (page 404).
 
 ## Description
