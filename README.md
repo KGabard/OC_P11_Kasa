@@ -31,3 +31,5 @@ Les maquettes sont fournies par Openclassrooms : [ici](https://www.figma.com/fil
 
 ## Démo du site
 La démo du site est disponible : [ici](https://kgabard.github.io/OC_P11_Kasa/)
+
+JH : 3
