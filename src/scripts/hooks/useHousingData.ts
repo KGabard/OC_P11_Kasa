@@ -11,13 +11,7 @@ const useHousingData = () => {
   ) => HousingDataType | undefined = (currentId) => {
     const housingArray = getHousingData()
 
-    const filteredHousingArray = housingArray.filter(
-      (housing) => housing.id === currentId
-    )
-
-    if (filteredHousingArray.length === 0) return undefined
-
-    return housingArray.filter((housing) => housing.id === currentId)[0]
+    return housingArray.find((housing) => housing.id === currentId)
   }
 
   return { getHousingData, getCurrentHousingData }

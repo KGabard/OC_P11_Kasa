@@ -16,7 +16,8 @@ const Housing = () => {
       navigate('/not-found')
     }
     window.scrollTo(0, 0)
-  }, [currentHousing, navigate])
+    //eslint-disable-next-line
+  }, [])
 
   return (
     <>

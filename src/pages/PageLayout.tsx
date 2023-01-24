@@ -6,7 +6,7 @@ const PageLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Header />
-      {children}
+      <div className="page-body">{children}</div>
       <Footer />
     </>
   )
