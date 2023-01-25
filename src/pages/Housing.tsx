@@ -1,26 +1,39 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Carousel from '../components/Carousel'
 import Accordion from '../components/Accordion'
 import HousingHeader from '../layouts/HousingHeader'
-import useHousingData from '../scripts/hooks/useHousingData'
+import { HousingDataType } from '../scripts/types/Types'
+import { HousingApi } from '../scripts/api/HousingApi'
 
 const Housing = () => {
-  const { id } = useParams()
+  const { id: currentId } = useParams()
   const navigate = useNavigate()
-  const { getCurrentHousingData } = useHousingData()
-  const currentHousing = getCurrentHousingData(id)
+  const [currentHousing, setCurrentHousing] = useState<
+    HousingDataType | undefined
+  >(undefined)
+  const housingApi = new HousingApi('mockData/housings.json')
 
   useEffect(() => {
-    if (!currentHousing) {
-      navigate('/not-found')
+    async function getHousingData() {
+      const fetchCurrentHousing = await housingApi.getCurrentHousing(currentId)
+      if (fetchCurrentHousing) {
+        setCurrentHousing(fetchCurrentHousing)
+      } else {
+        navigate('/not-found')
+      }
     }
-    window.scrollTo(0, 0)
-    //eslint-disable-next-line
+    getHousingData()
+    // eslint-disable-next-line
   }, [])
 
   return (
     <>
+      {/* {!currentHousing && (
+        <>
+          <h1>LOADING...</h1>
+        </>
+      )} */}
       {currentHousing && (
         <>
           <Carousel images={currentHousing?.pictures} />
