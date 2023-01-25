@@ -4,7 +4,7 @@ type Props = {
   host: HostDataType
 }
 
-const Tag = ({ host }: Props) => {
+const Host = ({ host }: Props) => {
   return (
     <div className="host">
       <div className="host__name">
@@ -16,4 +16,4 @@ const Tag = ({ host }: Props) => {
   )
 }
 
-export default Tag
+export default Host

@@ -43,7 +43,7 @@
       transform: scaleX(1) scaleY(1) translateX(-36px);
     }
   }
-  
+
   @keyframes squeeze-slide-right {
     0% {
       transform: scaleX(1) scaleY(1) translateX(0);
@@ -54,5 +54,17 @@
     100% {
       transform: scaleX(1) scaleY(1) translateX(36px);
     }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(25deg);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(360deg+25deg);
   }
 }

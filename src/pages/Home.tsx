@@ -5,6 +5,7 @@ import HousingList from '../layouts/HousingList'
 import { HousingDataType } from '../scripts/types/Types'
 import { useEffect, useState } from 'react'
 import { HousingApi } from '../scripts/api/HousingApi'
+import Loader from '../components/Loader'
 
 const Home = () => {
   const [housingArray, setHousingArray] = useState<HousingDataType[]>([])
@@ -22,18 +23,22 @@ const Home = () => {
   return (
     <>
       <Banner imageUrl={homeBanner} title="Chez vous, partout et ailleurs" />
-      <HousingList>
-        {housingArray.map((housing) => {
-          return (
-            <HousingCard
-              key={housing.id}
-              id={housing.id}
-              title={housing.title}
-              imageUrl={housing.cover}
-            />
-          )
-        })}
-      </HousingList>
+      {housingArray.length === 0 ? (
+        <Loader />
+      ) : (
+        <HousingList>
+          {housingArray.map((housing) => {
+            return (
+              <HousingCard
+                key={housing.id}
+                id={housing.id}
+                title={housing.title}
+                imageUrl={housing.cover}
+              />
+            )
+          })}
+        </HousingList>
+      )}
     </>
   )
 }

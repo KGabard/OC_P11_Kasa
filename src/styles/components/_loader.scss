@@ -1,0 +1,46 @@
+$nb-of-disc: 50;
+$anim-delay: 20ms;
+$anim-duration: $nb-of-disc * $anim-delay;
+$disc-size: 16px;
+$loader-size: 100px;
+
+.loader {
+  border-radius: 50%;
+  animation: spin $anim-duration 10 ease both;
+  perspective: 1px;
+  transform-origin: center $loader-size * 0.5;
+  position: absolute;
+
+  @for $n from 1 through 50 {
+    &:nth-of-type(#{$n}) {
+      animation-delay: $n * $anim-delay / 4;
+      background-color: mix(
+        transparent,
+        $highlight-primary,
+        $n * (100 / $nb-of-disc)
+      );
+      z-index: 100 - $n;
+      opacity: 1 - ($n / 1.2) * (1 / $nb-of-disc);
+      top: disc-size-calc($n) * -0.5;
+      left: calc(50% + disc-size-calc($n) * -0.5);
+      width: disc-size-calc($n);
+      height: disc-size-calc($n);
+    }
+  }
+
+  &__overlay {
+    margin: 48px 0;
+    position: relative;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    width: $loader-size;
+    height: $loader-size;
+    border-radius: 50%;
+    position: relative;
+  }
+}

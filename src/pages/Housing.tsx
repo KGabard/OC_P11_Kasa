@@ -5,6 +5,7 @@ import Accordion from '../components/Accordion'
 import HousingHeader from '../layouts/HousingHeader'
 import { HousingDataType } from '../scripts/types/Types'
 import { HousingApi } from '../scripts/api/HousingApi'
+import Loader from '../components/Loader'
 
 const Housing = () => {
   const { id: currentId } = useParams()
@@ -29,11 +30,7 @@ const Housing = () => {
 
   return (
     <>
-      {/* {!currentHousing && (
-        <>
-          <h1>LOADING...</h1>
-        </>
-      )} */}
+      {!currentHousing && <Loader />}
       {currentHousing && (
         <>
           <Carousel images={currentHousing?.pictures} />
