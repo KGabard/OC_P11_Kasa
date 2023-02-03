@@ -1,7 +1,7 @@
 # OC Projet n°11 : Kasa
 
 ## Objectifs
-- Intégrer une aplication React à partir de maquettes.
+- Intégrer une application React à partir de maquettes.
 - Mettre en place un système de navigation avec React Router.
 - Développer l'application avec Typecscript.
 - Organiser la structure de dossier de l'application (Components, Layouts, Pages, etc...).
